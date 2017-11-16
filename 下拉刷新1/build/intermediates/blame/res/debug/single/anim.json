@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\anim\\rotating.xml",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\anim\\rotating.xml"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\anim\\reverse_anim.xml",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\anim\\reverse_anim.xml"
+    }
+]

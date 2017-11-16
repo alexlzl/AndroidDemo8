@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\refreshing.png",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\drawable-xhdpi\\refreshing.png"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\pullup_icon_big.png",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\drawable-xhdpi\\pullup_icon_big.png"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\refresh_failed.png",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\drawable-xhdpi\\refresh_failed.png"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\loading.png",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\drawable-xhdpi\\loading.png"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_launcher.png",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\drawable-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\load_succeed.png",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\drawable-xhdpi\\load_succeed.png"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\pull_icon_big.png",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\drawable-xhdpi\\pull_icon_big.png"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\load_failed.png",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\drawable-xhdpi\\load_failed.png"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\refresh_succeed.png",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\drawable-xhdpi\\refresh_succeed.png"
+    }
+]

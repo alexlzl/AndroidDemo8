@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\BottomBar\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_friends.png",
+        "source": "E:\\Project\\Android\\Demo6\\BottomBar\\src\\main\\res\\drawable-xhdpi\\ic_friends.png"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\BottomBar\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_favorites.png",
+        "source": "E:\\Project\\Android\\Demo6\\BottomBar\\src\\main\\res\\drawable-xhdpi\\ic_favorites.png"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\BottomBar\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_recents.png",
+        "source": "E:\\Project\\Android\\Demo6\\BottomBar\\src\\main\\res\\drawable-xhdpi\\ic_recents.png"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\BottomBar\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_nearby.png",
+        "source": "E:\\Project\\Android\\Demo6\\BottomBar\\src\\main\\res\\drawable-xhdpi\\ic_nearby.png"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\BottomBar\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_restaurants.png",
+        "source": "E:\\Project\\Android\\Demo6\\BottomBar\\src\\main\\res\\drawable-xhdpi\\ic_restaurants.png"
+    }
+]

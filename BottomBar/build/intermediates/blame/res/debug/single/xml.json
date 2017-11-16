@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\BottomBar\\build\\intermediates\\res\\merged\\debug\\xml\\bottombar_tabs_color_changing.xml",
+        "source": "E:\\Project\\Android\\Demo6\\BottomBar\\src\\main\\res\\xml\\bottombar_tabs_color_changing.xml"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\BottomBar\\build\\intermediates\\res\\merged\\debug\\xml\\bottombar_tabs_three.xml",
+        "source": "E:\\Project\\Android\\Demo6\\BottomBar\\src\\main\\res\\xml\\bottombar_tabs_three.xml"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\BottomBar\\build\\intermediates\\res\\merged\\debug\\xml\\bottombar_tabs_five.xml",
+        "source": "E:\\Project\\Android\\Demo6\\BottomBar\\src\\main\\res\\xml\\bottombar_tabs_five.xml"
+    }
+]

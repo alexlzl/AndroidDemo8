@@ -1,0 +1,46 @@
+[
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\layout\\activity_webview.xml",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\layout\\activity_webview.xml"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\layout\\list_item_layout.xml",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\layout\\list_item_layout.xml"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\layout\\load_more.xml",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\layout\\load_more.xml"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\layout\\activity_textview.xml",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\layout\\activity_textview.xml"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\layout\\activity_scrollview.xml",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\layout\\activity_scrollview.xml"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\layout\\activity_imageview.xml",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\layout\\activity_imageview.xml"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\layout\\activity_expandablelistview.xml",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\layout\\activity_expandablelistview.xml"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\layout\\refresh_head.xml",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\layout\\refresh_head.xml"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\layout\\activity_gridview.xml",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\layout\\activity_gridview.xml"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\下拉刷新1\\build\\intermediates\\res\\merged\\debug\\layout\\activity_listview.xml",
+        "source": "E:\\Project\\Android\\Demo6\\下拉刷新1\\src\\main\\res\\layout\\activity_listview.xml"
+    }
+]

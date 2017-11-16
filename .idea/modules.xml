@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BottomBar/BottomBar.iml" filepath="$PROJECT_DIR$/BottomBar/BottomBar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Demo6.iml" filepath="$PROJECT_DIR$/Demo6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GradleLib/GradleLib.iml" filepath="$PROJECT_DIR$/GradleLib/GradleLib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GradleLib1/GradleLib1.iml" filepath="$PROJECT_DIR$/GradleLib1/GradleLib1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GradleTest/GradleTest.iml" filepath="$PROJECT_DIR$/GradleTest/GradleTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/banner/banner.iml" filepath="$PROJECT_DIR$/banner/banner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bottom-bar/bottom-bar.iml" filepath="$PROJECT_DIR$/bottom-bar/bottom-bar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/下拉刷新/下拉刷新.iml" filepath="$PROJECT_DIR$/下拉刷新/下拉刷新.iml" />
+      <module fileurl="file://$PROJECT_DIR$/下拉刷新1/下拉刷新1.iml" filepath="$PROJECT_DIR$/下拉刷新1/下拉刷新1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/下拉刷新2/下拉刷新2.iml" filepath="$PROJECT_DIR$/下拉刷新2/下拉刷新2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/图片回落到原处/gridViewAnimTest.iml" filepath="$PROJECT_DIR$/图片回落到原处/gridViewAnimTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/城市选择/城市选择.iml" filepath="$PROJECT_DIR$/城市选择/城市选择.iml" />
+      <module fileurl="file://$PROJECT_DIR$/城市选择lib/城市选择lib.iml" filepath="$PROJECT_DIR$/城市选择lib/城市选择lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/广告轮播/广告轮播.iml" filepath="$PROJECT_DIR$/广告轮播/广告轮播.iml" />
+      <module fileurl="file://$PROJECT_DIR$/广告轮播1/广告轮播1.iml" filepath="$PROJECT_DIR$/广告轮播1/广告轮播1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/广告轮播Lib/广告轮播Lib.iml" filepath="$PROJECT_DIR$/广告轮播Lib/广告轮播Lib.iml" />
+    </modules>
+  </component>
+</project>

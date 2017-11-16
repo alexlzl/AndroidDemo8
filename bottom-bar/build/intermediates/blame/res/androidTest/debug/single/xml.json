@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\bottom-bar\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\dummy_tabs_three.xml",
+        "source": "E:\\Project\\Android\\Demo6\\bottom-bar\\src\\androidTest\\res\\xml\\dummy_tabs_three.xml"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\bottom-bar\\build\\intermediates\\res\\merged\\androidTest\\debug\\xml\\dummy_tabs_five.xml",
+        "source": "E:\\Project\\Android\\Demo6\\bottom-bar\\src\\androidTest\\res\\xml\\dummy_tabs_five.xml"
+    }
+]

@@ -1,0 +1,3 @@
+include ':GradleTest', ':GradleLib', ':GradleLib1', 'BottomBar', ':bottom-bar', ':app', ':广告轮播', ':广告轮播Lib', ':广告轮播1', ':banner', ':城市选择lib', ':城市选择', '下拉刷新', '下拉刷新2'
+include ':下拉刷新1'
+include ':图片回落到原处'

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\BottomBar\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\design_layout_snackbar.xml",
+        "source": "E:\\Project\\Android\\Demo6\\BottomBar\\build\\intermediates\\exploded-aar\\com.android.support\\design\\25.3.0\\res\\layout-sw600dp-v13\\design_layout_snackbar.xml"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\BottomBar\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\activity_three_tabs.xml",
+        "source": "E:\\Project\\Android\\Demo6\\BottomBar\\src\\main\\res\\layout-sw600dp\\activity_three_tabs.xml"
+    },
+    {
+        "merged": "E:\\Project\\Android\\Demo6\\BottomBar\\build\\intermediates\\res\\merged\\debug\\layout-sw600dp-v13\\activity_color_changing_tabs.xml",
+        "source": "E:\\Project\\Android\\Demo6\\BottomBar\\src\\main\\res\\layout-sw600dp\\activity_color_changing_tabs.xml"
+    }
+]
