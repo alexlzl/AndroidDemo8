@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+    <com.example.myapplication.MyFrameLayout
+        android:id="@+id/mFrame"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="300dp"
+        android:background="#00FFFF" >
+
+        <com.example.myapplication.MyImageView
+            android:id="@+id/mImage"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@mipmap/ic_launcher"
+            android:background="#00FF00"
+            android:layout_gravity="center" />
+    </com.example.myapplication.MyFrameLayout>
+
+</FrameLayout>
