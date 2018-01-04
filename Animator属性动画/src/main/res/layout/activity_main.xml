@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/test"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="com.example.myapplication.MainActivity">
+
+    <Button
+        android:id="@+id/button1"
+        android:background="@color/colorPrimary"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:text="Hello World!"
+        android:onClick="testButton1"
+        />
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/button2"
+        android:background="@color/colorPrimary"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:text="Hello World!"
+        android:onClick="testButton2"
+        />
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/button3"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:text="Hello World!"
+        android:onClick="testButton3"
+        />
+    <Button
+        android:layout_marginTop="20dp"
+        android:id="@+id/button4"
+        android:background="@color/colorPrimary"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:text="Hello World!"
+        android:onClick="testButton4"
+        />
+</LinearLayout>
