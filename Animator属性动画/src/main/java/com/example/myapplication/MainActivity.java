@@ -1,9 +1,11 @@
 package com.example.myapplication;
 
+import android.animation.ArgbEvaluator;
 import android.animation.ObjectAnimator;
 import android.animation.TypeEvaluator;
 import android.animation.ValueAnimator;
 import android.app.Activity;
+import android.graphics.Color;
 import android.graphics.PointF;
 import android.os.Bundle;
 import android.util.Log;
@@ -94,6 +96,67 @@ public class MainActivity extends Activity {
         objectAnimator.setInterpolator(new AccelerateInterpolator());
         objectAnimator.setRepeatCount(-1);
         objectAnimator.setRepeatMode(ValueAnimator.REVERSE);
+        objectAnimator.start();
+
+    }
+
+
+    public void testButton5(final View view) {
+        ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(view, "translationX", 0.0f, 350.0f, 150.0f);
+        objectAnimator.setRepeatCount(-1);
+        objectAnimator.setRepeatMode(ValueAnimator.REVERSE);
+        objectAnimator.setDuration(1500);
+        objectAnimator.start();
+    }
+
+    public void testButton6(final View view) {
+        ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(view, "scaleX", 1.0f, 1.5f);
+        objectAnimator.setDuration(2000);
+        objectAnimator.setRepeatCount(ValueAnimator.INFINITE);
+        objectAnimator.setRepeatMode(ValueAnimator.RESTART);
+        objectAnimator.start();
+
+    }
+
+    public void testButton7(final View view) {
+        ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(view, "rotationX", 0.0f, 90.0f, 0.0F);
+        objectAnimator.setDuration(2000);
+        objectAnimator.setRepeatCount(ValueAnimator.INFINITE);
+        objectAnimator.setRepeatMode(ValueAnimator.RESTART);
+        objectAnimator.start();
+
+
+    }
+
+    public void testButton8(final View view) {
+        ObjectAnimator objectAnimator = ObjectAnimator.ofFloat(view, "alpha", 1.0f, 0.3f, 1.0F);
+        objectAnimator.setDuration(2000);
+        objectAnimator.setRepeatCount(ValueAnimator.INFINITE);
+        objectAnimator.setRepeatMode(ValueAnimator.RESTART);
+        objectAnimator.start();
+
+
+    }
+
+    public void testButton9(final View view) {
+        int colorA = Color.parseColor("#ff0000");
+        int colorB = Color.parseColor("#00ff00");
+        int colorC = Color.parseColor("#00ffff");
+        ObjectAnimator objectAnimator2 = ObjectAnimator.ofInt(view, "textColor", colorA, colorB);
+        objectAnimator2.setDuration(2000);
+        objectAnimator2.start();
+
+
+    }
+
+    public void testButton10(final View view) {
+        view.animate().translationX(100).translationY(100).setDuration(2000).start();
+        int colorA = Color.parseColor("#ff0000");
+        int colorB = Color.parseColor("#00ff00");
+        int colorC = Color.parseColor("#00ffff");
+        ObjectAnimator objectAnimator = ObjectAnimator.ofInt(view, "backgroundColor", colorA, colorB, colorC);
+        objectAnimator.setDuration(2000);
+        objectAnimator.setEvaluator(new ArgbEvaluator());
         objectAnimator.start();
 
     }
