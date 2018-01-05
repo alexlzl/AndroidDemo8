@@ -1,89 +1,32 @@
 apply plugin: 'com.android.application'
-apply plugin: 'me.tatarka.retrolambda'
+
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
-
-//这里是要输入的路径
-    def outputPathName = "E:\\zleap\\Filemanage\\lelo\\host\\src\\main\\assets\\lelo.apk"
-//这是应用编译完成
-    applicationVariants.all { variant ->
-        variant.outputs.each { output ->
-            //开始输出
-            output.outputFile = new File(outputPathName)
-        }
-    }
-
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
-        applicationId "com.bolin.lelo"
+        applicationId "com.test.banner"
         minSdkVersion 14
-        targetSdkVersion 23
+        targetSdkVersion 25
         versionCode 1
         versionName "1.0"
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
-//    retrolambda {
-//        // 官方建議使用環境變數，不過我這邊路經都回傳 null
-//        //jdk System.getenv("JAVA8_HOME")
-//        //oldJdk System.getenv("JAVA6_HOME")
-//        //下列是我 mac java7 及 java8 的相對路徑
-//        jdk 'D:\\Program Files\\Java\\jdk1.8.0_101'
-//        oldJdk 'D:\\Program Files\\Java\\jdk1.7.0_79'
-//        javaVersion JavaVersion.VERSION_1_7
-//        jvmArgs '-noverify'
-//        defaultMethods false
-//        incremental true
-//    }
-
-    dataBinding {
-        enabled = true
-    }
-
 }
-
-
-
-
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-
-
-    compile 'com.orhanobut:logger:1.15'
-    compile 'com.zhy:percent-support-extends:1.1.1'
-    compile 'com.balysv:material-ripple:1.0.2'
-    compile 'com.android.support:appcompat-v7:24.0.0-alpha1'
-    compile 'com.android.support:support-v4:23.2.1'
-    compile 'org.greenrobot:eventbus:3.0.0'
-
-}
-
-buildscript {
-//    buildscript中的声明是gradle脚本自身需要使用的资源,可以声明的资源包括依赖项、第三方插件、maven仓库地址等
-    repositories {
-        jcenter()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
-        classpath 'me.tatarka:gradle-retrolambda:3.2.5'
-    }
-}
-
-//而在build.gradle文件中直接声明的依赖项、仓库地址等信息是项目自身需要的资源。
-allprojects {
-    repositories {
-        jcenter()
-    }
+    compile 'com.android.support:appcompat-v7:23+'
+    compile 'com.android.support:recyclerview-v7:23+'
+    compile "com.github.bumptech.glide:glide:3.7.0"
+    compile 'com.facebook.fresco:fresco:0.12.0'
+    compile 'com.zxy.android:recovery:0.0.8'
+    compile project(':banner')
+//    compile 'com.youth.banner:banner:+'
 }
