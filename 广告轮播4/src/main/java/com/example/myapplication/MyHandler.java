@@ -38,14 +38,14 @@ public class MyHandler extends Handler {
                 int currentItem = activity.viewPager.getCurrentItem();
                 activity.viewPager.setCurrentItem(++currentItem);
                 //5秒后继续轮播
-                activity.handler.sendEmptyMessageDelayed(MainActivity.BANNER_NEXT, 1000);
+                activity.handler.sendEmptyMessageDelayed(MainActivity.BANNER_NEXT, 2000);
                 break;
             case MainActivity.BANNER_PAUSE:
                 //暂停,不需要做任务操作
                 break;
             case MainActivity.BANNER_RESUME:
                 //继续轮播
-                activity.handler.sendEmptyMessageDelayed(MainActivity.BANNER_NEXT, 1000);
+                activity.handler.sendEmptyMessageDelayed(MainActivity.BANNER_NEXT, 2000);
                 break;
         }
     }

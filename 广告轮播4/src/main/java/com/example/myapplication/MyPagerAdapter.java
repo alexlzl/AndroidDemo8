@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import java.util.List;
 public class MyPagerAdapter extends PagerAdapter {
     private Context context;
     List<View> list;
+    private int newPosition;
 
     public MyPagerAdapter(Context context, List<View> list) {
         this.context = context;
@@ -33,32 +35,30 @@ public class MyPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(final ViewGroup container, int position) {
         //当前位置模上总数等于图片在数组中的位置
-        position %= list.size();
-        if (position < 0) {
-            position = list.size() + position;
+        newPosition =position% list.size();
+        if (newPosition < 0) {
+            newPosition = list.size() + newPosition;
         }
-        SimpleDraweeView imageView = list.get(position).findViewById(R.id.iv);
-//        SimpleDraweeView imageView = (SimpleDraweeView) list.get(position);
+        SimpleDraweeView imageView = list.get(newPosition).findViewById(R.id.iv);
         //设置轮播点击事件
-        final int finalPosition = position;
-
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "test", Toast.LENGTH_SHORT).show();
+                if(newPosition==0){
+                    Toast.makeText(context, "test"+"最后一页", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(context, "test"+newPosition, Toast.LENGTH_SHORT).show();
+                }
+
 
             }
         });
-//        ViewGroup parent = (ViewGroup) imageView.getParent();
-//        if (parent != null) {
-//            parent.removeView(imageView);
-//        }
-        ViewGroup parent= (ViewGroup) list.get(position).getParent();
+        ViewGroup parent = (ViewGroup) list.get(newPosition).getParent();
         if (parent != null) {
-            parent.removeView(list.get(position));
+            parent.removeView(list.get(newPosition));
         }
-        container.addView(list.get(position));
-        return list.get(position);
+        container.addView(list.get(newPosition));
+        return list.get(newPosition);
     }
 
     @Override
@@ -67,9 +67,7 @@ public class MyPagerAdapter extends PagerAdapter {
     }
 
     @Override
-    public void destroyItem(ViewGroup container, int position, Object object) {
-        //注意这里不要使用
-        //container.removeView(list.get(position));
+    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+//        super.destroyItem(container, position, object);
     }
-
 }
