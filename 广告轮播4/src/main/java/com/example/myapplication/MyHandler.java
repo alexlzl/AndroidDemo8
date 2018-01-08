@@ -1,6 +1,5 @@
 package com.example.myapplication;
 
-import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
 
@@ -11,7 +10,10 @@ import java.lang.ref.WeakReference;
  */
 
 public class MyHandler extends Handler {
-    private Context context;
+    public static final int BANNER_NEXT = 0;
+    public static final int BANNER_PAUSE = 1;
+    public static final int BANNER_RESUME = 2;
+    public static final int CHANGE_TIME=2000;
     //使用弱引用，避免handler造成内存泄露
     private WeakReference<MainActivity> weakReference;
 
@@ -29,23 +31,23 @@ public class MyHandler extends Handler {
             return;
         }
         //如果已经有消息了，先移除消息
-        if (activity.handler.hasMessages(MainActivity.BANNER_NEXT)) {
-            activity.handler.removeMessages(MainActivity.BANNER_NEXT);
+        if (activity.handler.hasMessages(BANNER_NEXT)) {
+            activity.handler.removeMessages(BANNER_NEXT);
         }
         switch (msg.what) {
-            case MainActivity.BANNER_NEXT:
+            case BANNER_NEXT:
                 //跳到下一页，
                 int currentItem = activity.viewPager.getCurrentItem();
                 activity.viewPager.setCurrentItem(++currentItem);
-                //5秒后继续轮播
-                activity.handler.sendEmptyMessageDelayed(MainActivity.BANNER_NEXT, 2000);
+                //2秒后继续轮播
+                activity.handler.sendEmptyMessageDelayed(BANNER_NEXT, CHANGE_TIME);
                 break;
-            case MainActivity.BANNER_PAUSE:
+            case BANNER_PAUSE:
                 //暂停,不需要做任务操作
                 break;
-            case MainActivity.BANNER_RESUME:
+            case BANNER_RESUME:
                 //继续轮播
-                activity.handler.sendEmptyMessageDelayed(MainActivity.BANNER_NEXT, 2000);
+                activity.handler.sendEmptyMessageDelayed(BANNER_NEXT, CHANGE_TIME);
                 break;
         }
     }

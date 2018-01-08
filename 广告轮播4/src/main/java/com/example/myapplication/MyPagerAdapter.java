@@ -17,7 +17,7 @@ import java.util.List;
 
 public class MyPagerAdapter extends PagerAdapter {
     private Context context;
-    List<View> list;
+    private List<View> list;
     private int newPosition;
 
     public MyPagerAdapter(Context context, List<View> list) {
@@ -68,6 +68,5 @@ public class MyPagerAdapter extends PagerAdapter {
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-//        super.destroyItem(container, position, object);
     }
 }
