@@ -27,14 +27,14 @@ public class MainActivity extends Activity {
     private View childFour;
     private RadioGroup radioGroup;
     //当前索引位置以及上一个索引位置
-    public int index = 0,preIndex = 0;
-    private  List<View> list;
+    public int index = 0, preIndex = 0;
+    private List<View> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        radioGroup=findViewById(R.id.group);
+        radioGroup = findViewById(R.id.group);
         layoutInflater = LayoutInflater.from(this);
         childOne = layoutInflater.inflate(R.layout.item, null);
         childTwo = layoutInflater.inflate(R.layout.item, null);
@@ -61,16 +61,13 @@ public class MainActivity extends Activity {
         imageView3.setImageURI(uri3);
         imageView4.setImageURI(uri4);
         list = new ArrayList<>();
-//        list.add(imageView1);
-//        list.add(imageView2);
-//        list.add(imageView3);
         list.add(childOne);
         list.add(childTwo);
         list.add(childThree);
         list.add(childFour);
         initRadioButton(list.size());
         WeakReference<MainActivity> weakReference = new WeakReference(this);
-        MyPagerAdapter adapter = new MyPagerAdapter(this, list,weakReference);
+        MyPagerAdapter adapter = new MyPagerAdapter(this, list, weakReference);
         viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(adapter);
 
@@ -81,13 +78,12 @@ public class MainActivity extends Activity {
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                index =position% list.size();
+                index = position % list.size();
             }
 
             @Override
             public void onPageSelected(int position) {
-//                index = position;//当前位置赋值给索引
-                index = position%list.size();//当前位置赋值给索引
+                index = position % list.size();//当前位置赋值给索引
                 setCurrentDot(index);
 
             }
@@ -108,15 +104,17 @@ public class MainActivity extends Activity {
             }
         });
     }
+
     /**
      * 根据图片个数初始化按钮
+     *
      * @param length
      */
     private void initRadioButton(int length) {
-        for(int i = 0;i<length;i++){
+        for (int i = 0; i < length; i++) {
             ImageView imageview = new ImageView(this);
             imageview.setImageResource(R.drawable.bg);//设置背景选择器
-            imageview.setPadding(20,0,0,0);//设置每个按钮之间的间距
+            imageview.setPadding(20, 0, 0, 0);//设置每个按钮之间的间距
             //将按钮依次添加到RadioGroup中
             radioGroup.addView(imageview, 40, 40);
             //默认选中第一个按钮，因为默认显示第一张图片
@@ -126,15 +124,16 @@ public class MainActivity extends Activity {
 
     /**
      * 设置对应位置按钮的状态
+     *
      * @param i 当前位置
      */
     private void setCurrentDot(int i) {
-        for(int m=0;m<radioGroup.getChildCount();m++){
-            if(radioGroup.getChildAt(m)!=null){
+        for (int m = 0; m < radioGroup.getChildCount(); m++) {
+            if (radioGroup.getChildAt(m) != null) {
                 radioGroup.getChildAt(m).setEnabled(true);//当前按钮选中
             }
         }
-        if(radioGroup.getChildAt(i)!=null){
+        if (radioGroup.getChildAt(i) != null) {
             radioGroup.getChildAt(i).setEnabled(false);//当前按钮选中
         }
 
