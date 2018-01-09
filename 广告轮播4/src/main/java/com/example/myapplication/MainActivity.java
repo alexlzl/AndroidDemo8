@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -28,7 +27,7 @@ public class MainActivity extends Activity {
     private View childFour;
     private RadioGroup radioGroup;
     //当前索引位置以及上一个索引位置
-    private int index = 0,preIndex = 0;
+    public int index = 0,preIndex = 0;
     private  List<View> list;
 
     @Override
@@ -70,10 +69,11 @@ public class MainActivity extends Activity {
         list.add(childThree);
         list.add(childFour);
         initRadioButton(list.size());
-        MyPagerAdapter adapter = new MyPagerAdapter(this, list);
+        WeakReference<MainActivity> weakReference = new WeakReference(this);
+        MyPagerAdapter adapter = new MyPagerAdapter(this, list,weakReference);
         viewPager = findViewById(R.id.view_pager);
         viewPager.setAdapter(adapter);
-        WeakReference<MainActivity> weakReference = new WeakReference(this);
+
         handler = new MyHandler(weakReference);
         //开始轮播
         handler.sendEmptyMessageDelayed(MyHandler.BANNER_NEXT, 2000);
@@ -86,8 +86,9 @@ public class MainActivity extends Activity {
 
             @Override
             public void onPageSelected(int position) {
-                index = position;//当前位置赋值给索引
-                setCurrentDot(index%list.size());
+//                index = position;//当前位置赋值给索引
+                index = position%list.size();//当前位置赋值给索引
+                setCurrentDot(index);
 
             }
 

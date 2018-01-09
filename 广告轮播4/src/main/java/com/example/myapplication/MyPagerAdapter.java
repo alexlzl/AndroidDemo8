@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import com.facebook.drawee.view.SimpleDraweeView;
 
+import java.lang.ref.WeakReference;
 import java.util.List;
 
 /**
@@ -19,10 +20,15 @@ public class MyPagerAdapter extends PagerAdapter {
     private Context context;
     private List<View> list;
     private int newPosition;
-
-    public MyPagerAdapter(Context context, List<View> list) {
+    private WeakReference<MainActivity> mweakReference;
+    MainActivity activity;
+    public MyPagerAdapter(Context context, List<View> list,WeakReference<MainActivity> weakReference) {
         this.context = context;
         this.list = list;
+        this.mweakReference = weakReference;
+         activity = mweakReference.get();
+
+
     }
 
     @Override
@@ -44,12 +50,20 @@ public class MyPagerAdapter extends PagerAdapter {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(newPosition==0){
-                    Toast.makeText(context, "test"+"最后一页", Toast.LENGTH_SHORT).show();
-                }else{
-                    Toast.makeText(context, "test"+newPosition, Toast.LENGTH_SHORT).show();
+//                if(newPosition==0){
+//                    Toast.makeText(context, "test"+"最后一页", Toast.LENGTH_SHORT).show();
+//                }else{
+//                    //Activity不存在了，就不需要再处理了
+//                    if (activity == null) {
+//                        return;
+//                    }
+//                    Toast.makeText(context, "test"+activity.index+1, Toast.LENGTH_SHORT).show();
+//                }
+                //Activity不存在了，就不需要再处理了
+                if (activity == null) {
+                    return;
                 }
-
+                Toast.makeText(context, "test"+(activity.index+1), Toast.LENGTH_SHORT).show();
 
             }
         });
