@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 
 import java.lang.ref.WeakReference;
 
@@ -37,13 +38,17 @@ public class MyHandler extends Handler {
         switch (msg.what) {
             case BANNER_NEXT:
                 //跳到下一页，
+
                 int currentItem = activity.viewPager.getCurrentItem();
+                Log.e("TAG","BANNER_NEXT==当前页"+currentItem);
                 activity.viewPager.setCurrentItem(++currentItem);
+
                 //2秒后继续轮播
                 activity.handler.sendEmptyMessageDelayed(BANNER_NEXT, CHANGE_TIME);
                 break;
             case BANNER_PAUSE:
                 //暂停,不需要做任务操作
+               removeMessages(BANNER_NEXT);
                 break;
             case BANNER_RESUME:
                 //继续轮播

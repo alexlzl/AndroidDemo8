@@ -140,6 +140,9 @@ public class MainActivity extends Activity {
 
     }
 
-
-
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        handler.removeMessages(MyHandler.BANNER_NEXT);
+    }
 }

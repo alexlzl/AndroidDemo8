@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -17,6 +18,7 @@ import java.util.List;
  */
 
 public class MyPagerAdapter extends PagerAdapter {
+    private String TAG="TAG";
     private Context context;
     private List<View> list;
     private int newPosition;
@@ -39,26 +41,21 @@ public class MyPagerAdapter extends PagerAdapter {
     }
 
     @Override
-    public Object instantiateItem(final ViewGroup container, int position) {
+    public Object instantiateItem(final ViewGroup container, final int position) {
+        Log.e(TAG,"instantiateItem=="+position);
         //当前位置模上总数等于图片在数组中的位置
         newPosition =position% list.size();
         if (newPosition < 0) {
             newPosition = list.size() + newPosition;
         }
+        Log.e(TAG,"instantiateItem==newPosition=="+newPosition);
         SimpleDraweeView imageView = list.get(newPosition).findViewById(R.id.iv);
         //设置轮播点击事件
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                if(newPosition==0){
-//                    Toast.makeText(context, "test"+"最后一页", Toast.LENGTH_SHORT).show();
-//                }else{
-//                    //Activity不存在了，就不需要再处理了
-//                    if (activity == null) {
-//                        return;
-//                    }
-//                    Toast.makeText(context, "test"+activity.index+1, Toast.LENGTH_SHORT).show();
-//                }
+
+//                Toast.makeText(context, "test"+newPosition, Toast.LENGTH_SHORT).show();
                 //Activity不存在了，就不需要再处理了
                 if (activity == null) {
                     return;
@@ -77,10 +74,14 @@ public class MyPagerAdapter extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
+//        Log.e(TAG,"isViewFromObject==");
         return object == view;
     }
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+        container.removeView(list.get(position% list.size()));
+        Log.e(TAG,"destroyItem=="+position);
+
     }
 }
