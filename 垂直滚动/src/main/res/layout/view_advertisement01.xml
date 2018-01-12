@@ -11,13 +11,10 @@
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/marqueeview_bg"
-            android:text="热议"
-            android:textColor="#F14C00"
-            android:textSize="12sp" />
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+           android:id="@+id/simple" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -40,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/marqueeview_bg"
-            android:text="热议"
+            android:text="热议1"
             android:textColor="#F14C00"
             android:textSize="12sp" />
 

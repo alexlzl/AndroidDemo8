@@ -15,7 +15,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/marqueeview_bg"
-            android:text="热议"
+            android:text="热议2"
             android:textColor="#F14C00"
             android:textSize="12sp" />
 
@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/marqueeview_bg"
-            android:text="热议"
+            android:text="热议2"
             android:textColor="#F14C00"
             android:textSize="12sp" />
 
