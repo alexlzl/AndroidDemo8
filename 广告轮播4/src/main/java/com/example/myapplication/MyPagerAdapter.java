@@ -48,7 +48,7 @@ public class MyPagerAdapter extends PagerAdapter {
         if (newPosition < 0) {
             newPosition = list.size() + newPosition;
         }
-        Log.e(TAG,"instantiateItem==newPosition=="+newPosition);
+//        Log.e(TAG,"instantiateItem==newPosition=="+newPosition);
         SimpleDraweeView imageView = list.get(newPosition).findViewById(R.id.iv);
         //设置轮播点击事件
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -69,6 +69,7 @@ public class MyPagerAdapter extends PagerAdapter {
             parent.removeView(list.get(newPosition));
         }
         container.addView(list.get(newPosition));
+        Log.e(TAG,"container=="+container.getChildCount());
         return list.get(newPosition);
     }
 
@@ -80,8 +81,8 @@ public class MyPagerAdapter extends PagerAdapter {
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        container.removeView(list.get(position% list.size()));
-        Log.e(TAG,"destroyItem=="+position);
+//        container.removeView(list.get(position% list.size()));
+        Log.e(TAG,"destroyItem=="+position+"==="+position % list.size() );
 
     }
 }

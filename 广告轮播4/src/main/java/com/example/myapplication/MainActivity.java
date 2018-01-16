@@ -1,9 +1,11 @@
 package com.example.myapplication;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -43,28 +45,28 @@ public class MainActivity extends Activity {
         SimpleDraweeView imageView1 = childOne.findViewById(R.id.iv);
         SimpleDraweeView imageView2 = childTwo.findViewById(R.id.iv);
         SimpleDraweeView imageView3 = childThree.findViewById(R.id.iv);
-        SimpleDraweeView imageView4 = childFour.findViewById(R.id.iv);
+//        SimpleDraweeView imageView4 = childFour.findViewById(R.id.iv);
         TextView textView1 = childOne.findViewById(R.id.title);
         TextView textView2 = childTwo.findViewById(R.id.title);
         TextView textView3 = childThree.findViewById(R.id.title);
-        TextView textView4 = childFour.findViewById(R.id.title);
+//        TextView textView4 = childFour.findViewById(R.id.title);
         textView1.setText("1");
         textView2.setText("2");
         textView3.setText("3");
-        textView4.setText("4");
+//        textView4.setText("4");
         Uri uri1 = Uri.parse("http://pic4.nipic.com/20091217/3885730_124701000519_2.jpg");
         Uri uri2 = Uri.parse("http://pic47.nipic.com/20140826/9532020_221427317000_2.jpg");
         Uri uri3 = Uri.parse("http://img3.redocn.com/tupian/20150318/qingxinshuzhibiankuang_4021000.jpg");
-        Uri uri4 = Uri.parse("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1515416541169&di=8bc94a4be8e64b56dbe90d4241e4651d&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F32fa828ba61ea8d3d8d6c33f9c0a304e251f5810.jpg");
+//        Uri uri4 = Uri.parse("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1515416541169&di=8bc94a4be8e64b56dbe90d4241e4651d&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2F32fa828ba61ea8d3d8d6c33f9c0a304e251f5810.jpg");
         imageView1.setImageURI(uri1);
         imageView2.setImageURI(uri2);
         imageView3.setImageURI(uri3);
-        imageView4.setImageURI(uri4);
+//        imageView4.setImageURI(uri4);
         list = new ArrayList<>();
         list.add(childOne);
         list.add(childTwo);
         list.add(childThree);
-        list.add(childFour);
+//        list.add(childFour);
         initRadioButton(list.size());
         WeakReference<MainActivity> weakReference = new WeakReference(this);
         MyPagerAdapter adapter = new MyPagerAdapter(this, list, weakReference);
@@ -73,7 +75,7 @@ public class MainActivity extends Activity {
 
         handler = new MyHandler(weakReference);
         //开始轮播
-        handler.sendEmptyMessageDelayed(MyHandler.BANNER_NEXT, 2000);
+//        handler.sendEmptyMessageDelayed(MyHandler.BANNER_NEXT, 2000);
 
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
@@ -93,14 +95,32 @@ public class MainActivity extends Activity {
                 switch (state) {
                     case ViewPager.SCROLL_STATE_DRAGGING:
                         //用户正在滑动，暂停轮播
-                        handler.sendEmptyMessage(MyHandler.BANNER_PAUSE);
+//                        handler.sendEmptyMessage(MyHandler.BANNER_PAUSE);
                         break;
                     case ViewPager.SCROLL_STATE_IDLE:
                         //滑动结束，继续轮播
-                        handler.sendEmptyMessageDelayed(MyHandler.BANNER_NEXT, MyHandler.CHANGE_TIME);
+//                        handler.sendEmptyMessageDelayed(MyHandler.BANNER_NEXT, MyHandler.CHANGE_TIME);
                         break;
                 }
 
+            }
+        });
+          String url="http://pic4.nipic.com/20091217/3885730_124701000519_2.jpg";
+          String url1="http://111.206.238.134:8080/ncme/ncme/%E7%AC%AC%E4%B8%80%E8%B7%96%E9%AA%A8%E6%88%AA%E9%AA%A8.png?AWSAccessKeyId=0LAHL7DB9E6AQQGJXIFL&Expires=1541643041&Signature=3zf5SaNXzqdO0zmMYp%2ByE40IDmc%3D";
+        FrescoLoadUtil.getInstance().loadImageBitmap(url, new FrescoBitmapCallback<Bitmap>() {
+            @Override
+            public void onSuccess(Uri uri, Bitmap result) {
+                Bitmap bitmap=result;
+            }
+
+            @Override
+            public void onFailure(Uri uri, Throwable throwable) {
+                Log.e("tag","onFailure");
+            }
+
+            @Override
+            public void onCancel(Uri uri) {
+                Log.e("tag","onCancel");
             }
         });
     }
@@ -113,7 +133,7 @@ public class MainActivity extends Activity {
     private void initRadioButton(int length) {
         for (int i = 0; i < length; i++) {
             ImageView imageview = new ImageView(this);
-            imageview.setImageResource(R.drawable.bg);//设置背景选择器
+            imageview.setImageResource(R.drawable.gj_home_banner_indicator_bg);//设置背景选择器
             imageview.setPadding(20, 0, 0, 0);//设置每个按钮之间的间距
             //将按钮依次添加到RadioGroup中
             radioGroup.addView(imageview, 40, 40);
